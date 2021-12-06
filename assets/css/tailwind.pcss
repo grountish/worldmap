@@ -1,0 +1,29 @@
+@tailwind base;
+
+html { scroll-behavior: smooth; @apply font-sans antialiased overflow-x-hidden overflow-y-auto; }
+
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* :matches(a) { @apply hover:underline focus:underline; } */
+:matches(label, fieldset, legend, input, select, textarea, button, small) { font: inherit; }
+
+@tailwind components;
+
+@layer components {
+  .container { @apply w-full max-w-7xl mx-auto px-4 lg:px-10; }
+
+  .bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  .filter-frost { backdrop-filter: blur(4px); }
+}
